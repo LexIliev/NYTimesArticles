@@ -1,30 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image
+} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import styles from './styles';
 
-// TODO: Add Empty screen
-const Article = ({ title, byline, publishedDate, media, handleOnPress }) => (
-  <View>
-    <View>
-      <Image
-        style={styles.articleImage}
-        source={{
-          uri: media[0]['media-metadata'][0].url
-        }}
-      />
-      <View>
-        <Text>{title !== '' ? title : ' - '}</Text>
-        <View>
-          <Text>{byline !== '' ? byline : 'By -'}</Text>
-          <Text>{publishedDate !== '' ? publishedDate : 'N/A'}</Text>
+const Article = ({
+  title,
+  byline,
+  publishedDate,
+  media,
+  handleOnPress
+}) => (
+  <View style={styles.container}>
+    <View style={styles.wrapper}>
+      <View style={styles.articleImageWrapper}>
+        <Image
+          style={styles.articleImage}
+          source={{
+            uri: media[0]['media-metadata'][0].url
+          }}
+        />
+        <View style={styles.articleTextWrapper}>
+          <Text
+            style={[styles.text, styles.articleTitle]}
+            numberOfLines={2}
+          >
+            {title !== '' ? title : ' - '}
+          </Text>
+          <View style={styles.articleInfoWrapper}>
+            <Text style={[styles.text, styles.articleByline]}>
+              {byline !== '' ? byline : 'By -'}
+            </Text>
+            <Text style={[styles.text, styles.articlePublishedDate]}>
+              {publishedDate !== '' ? publishedDate : 'N/A'}
+            </Text>
+          </View>
         </View>
       </View>
-      <TouchableOpacity onPress={handleOnPress}>
-        <Icon name="chevron-right" size={22} color="#000" />
-      </TouchableOpacity>
+      <View style={styles.buttonWrapper}>
+        <TouchableOpacity onPress={handleOnPress}>
+          <Icon name="chevron-right" size={22} color="#000" />
+        </TouchableOpacity>
+      </View>
     </View>
   </View>
 );

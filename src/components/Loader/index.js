@@ -6,14 +6,10 @@ import styles from './styles';
 
 const Loader = ({ loaderText }) => (
   <View style={styles.container}>
-    <ActivityIndicator size="small" color="#00ff00" />
-    <Text>{loaderText}</Text>
+    <ActivityIndicator size="large" color="#7ff2ce" />
+    <Text style={styles.text}>{loaderText}</Text>
   </View>
 );
-
-Loader.defaultProps = {
-  loaderText: 'Loading...'
-};
 
 Loader.propTypes = {
   loaderText: PropTypes.string

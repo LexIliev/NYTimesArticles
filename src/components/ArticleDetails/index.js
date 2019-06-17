@@ -14,22 +14,19 @@ const ArticleDetails = ({
   const articleImage = media[0]['media-metadata'][2];
 
   return (
-    <View>
-      <Text>{title}</Text>
-      <Text>{abstract}</Text>
-      <Text>{byline}</Text>
-      <Text>{published_date}</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.abstract}>{abstract}</Text>
       <Image
-        style={
-          [
-            styles.articleDetailsImage,
-            { height: articleImage.height }
-          ]
-        }
+        style={[styles.articleDetailsImage, { height: articleImage.height }]}
         source={{
           uri: articleImage.url
         }}
       />
+      <View>
+        <Text style={styles.text}>{byline}</Text>
+        <Text style={styles.text}>{published_date}</Text>
+      </View>
     </View>
   );
 };

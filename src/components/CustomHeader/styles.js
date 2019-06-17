@@ -4,6 +4,8 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     height: 56,
-    backgroundColor: '#7ff2ce'
+    backgroundColor: '#7ff2ce',
+    // Renders shadow for Android
+    elevation: 5
   }
 });
