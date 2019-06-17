@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest --config jest.config.json --verbose --watch --env=jsdom",
+    "test:coverage": "jest --coverage",
+    "clear": "jest --clearCache"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -26,6 +28,8 @@
     "@babel/runtime": "^7.4.5",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.3",
@@ -33,7 +37,10 @@
     "eslint-plugin-react": "^7.13.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
-    "react-test-renderer": "16.8.3"
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "16.8.3",
+    "redux-mock-store": "^1.5.3",
+    "redux-saga-test-plan": "^4.0.0-beta.3"
   },
   "jest": {
     "preset": "react-native"
