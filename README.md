@@ -40,7 +40,7 @@ Follow the instructions here to create an account, in order to generate an API K
 
 [NY Times API - Get Started](https://developer.nytimes.com/get-started)
 
-Paste the generated API Key inside `api.js`: `API_KEY='your-api-key'`
+Paste the generated API Key inside `services/index.js`: `API_KEY='your-api-key'`
 
 To start the app:
 
