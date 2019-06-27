@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader component should match snapshot and render correctly: Primary snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`Loader component should render with loaderText prop: Secondary button snapshot 1`] = `ShallowWrapper {}`;

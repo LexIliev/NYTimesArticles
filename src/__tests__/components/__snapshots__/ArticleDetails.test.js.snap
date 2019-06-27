@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleDetails component should match snapshot and render correctly: Primary snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`ArticleDetails component should render correctly with empty string values: Secondary snapshot 1`] = `ShallowWrapper {}`;

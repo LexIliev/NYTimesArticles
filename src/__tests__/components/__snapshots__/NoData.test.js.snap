@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoData component should match snapshot and render correctly 1`] = `ShallowWrapper {}`;
